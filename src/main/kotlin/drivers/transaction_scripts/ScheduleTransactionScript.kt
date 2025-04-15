@@ -5,6 +5,7 @@ import drivers.active_records.Shift
 import java.time.LocalDateTime
 
 class ScheduleTransactionScript(private val repository: DriverRepository) {
+
     /**
      * Adds a shift to the driver by their id
      */
@@ -13,7 +14,7 @@ class ScheduleTransactionScript(private val repository: DriverRepository) {
 
         try {
             println("Добавление смены с $start до $end")
-            driver.addShift(Shift(start, end))
+            driver addShift Shift(start, end)
             repository.save(driver)
             println("Смена успешно добавлена.")
         } catch (e: Exception) {
@@ -34,6 +35,6 @@ class ScheduleTransactionScript(private val repository: DriverRepository) {
      */
     fun isDriverAvailableAt(driverId: Int, dateTime: LocalDateTime): Boolean {
         val driver = repository.findByIdOrThrow(driverId)
-        return driver.isAvailableAt(dateTime)
+        return driver isAvailableAt dateTime
     }
 }

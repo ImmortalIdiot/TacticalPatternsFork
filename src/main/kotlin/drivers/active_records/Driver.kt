@@ -32,5 +32,5 @@ data class Driver(
     /**
      * A driver is available at this time if he doesn't have the shift at this moment
      */
-    fun isAvailableAt(dateTime: LocalDateTime): Boolean = schedule.none { it.isDuring(dateTime = dateTime) }
+    infix fun isAvailableAt(dateTime: LocalDateTime): Boolean = schedule.none { it.isDuring(dateTime = dateTime) }
 }
