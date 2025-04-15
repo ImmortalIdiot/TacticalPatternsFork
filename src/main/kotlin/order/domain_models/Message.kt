@@ -1,7 +1,10 @@
 package order.domain_models
 
+import java.time.LocalDateTime
+
 data class Message(
     val content: String,
+    val timestamp: LocalDateTime = LocalDateTime.now(),
     val sender: Participant,
     val recipient: Participant
 ) {
