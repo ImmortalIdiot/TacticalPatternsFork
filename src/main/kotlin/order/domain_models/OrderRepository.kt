@@ -1,6 +1,4 @@
-package order.active_records
-
-import order.domain_models.TransportationOrder
+package order.domain_models
 
 object TransportationOrderRepositoryFactory {
     fun create(): OrderRepository = OrderRepositoryImpl()

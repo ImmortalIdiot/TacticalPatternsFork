@@ -1,6 +1,6 @@
 package order.transaction_scripts
 
-import order.active_records.OrderRepository
+import order.domain_models.OrderRepository
 import order.domain_models.OrderStatus
 
 class OrderLifecycleService(private val repository: OrderRepository) {

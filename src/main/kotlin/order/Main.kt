@@ -1,6 +1,5 @@
 package order
 
-import order.active_records.*
 import order.domain_models.*
 import order.transaction_scripts.FraudDetectionService
 import order.transaction_scripts.OrderLifecycleService
