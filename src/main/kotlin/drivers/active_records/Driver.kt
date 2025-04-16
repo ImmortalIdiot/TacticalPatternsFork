@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 
 data class Driver(
     val id: Int,
-    val fullName: String,
+    val fullName: FullName,
     var isActive: Boolean,
     private val schedule: MutableList<Shift> = mutableListOf()
 ) {
